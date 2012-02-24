@@ -1,0 +1,22 @@
+<font face="Helvetica"><h1>Posts</h1>
+
+<table>
+  <tr>
+    <th><b>Title</b></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= link_to post.title, post %></td>
+    <td><%= link_to 'Edit Post', edit_post_path(post) %></td>
+    <td><%= link_to 'Delete Post', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
+</font>

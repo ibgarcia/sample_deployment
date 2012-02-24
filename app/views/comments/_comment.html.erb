@@ -1,0 +1,11 @@
+<p><i>
+    <%= comment.commenter %></i> said:
+  </p>
+<p>
+    <%= comment.body %>
+</p>
+ 
+<p>
+<%= button_to "delete",  [comment.post, comment],:confirm => 'Are you sure?', :method=>:delete, :class=>:destroy %>
+</p>
+  
